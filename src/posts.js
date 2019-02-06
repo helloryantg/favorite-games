@@ -6,7 +6,7 @@ const posts = [
         user: 'Ryan Gonzales',
         userTitle: 'Full-Stack Web Developer',
         company: 'Student',
-        id: '123123',
+        id: '1',
         votes: 2
     },
     {
@@ -16,7 +16,7 @@ const posts = [
         user: 'Phuong Dinh',
         userTitle: 'Web Designer',
         company: 'Column Five',
-        id: '334333',
+        id: '2',
         votes: 12
     },
     {
@@ -26,7 +26,7 @@ const posts = [
         user: 'Phuong Dinh',
         userTitle: 'Web Designer',
         company: 'Column Five',
-        id: '334333',
+        id: '3',
         votes: 12
     },
     {
@@ -36,7 +36,7 @@ const posts = [
         user: 'Phuong Dinh',
         userTitle: 'Web Designer',
         company: 'Column Five',
-        id: '334333',
+        id: '4',
         votes: 12
     },
     {
@@ -46,7 +46,7 @@ const posts = [
         user: 'Phuong Dinh',
         userTitle: 'Web Designer',
         company: 'Column Five',
-        id: '334333',
+        id: '5',
         votes: 12
     },
     {
@@ -56,7 +56,7 @@ const posts = [
         user: 'Phuong Dinh',
         userTitle: 'Web Designer',
         company: 'Column Five',
-        id: '334333',
+        id: '6',
         votes: 12
     },
     {
@@ -66,7 +66,7 @@ const posts = [
         user: 'Phuong Dinh',
         userTitle: 'Web Designer',
         company: 'Column Five',
-        id: '334333',
+        id: '7',
         votes: 12
     },
     {
@@ -76,7 +76,7 @@ const posts = [
         user: 'Phuong Dinh',
         userTitle: 'Web Designer',
         company: 'Column Five',
-        id: '334333',
+        id: '8',
         votes: 12
     },
     {
@@ -86,7 +86,7 @@ const posts = [
         user: 'Phuong Dinh',
         userTitle: 'Web Designer',
         company: 'Column Five',
-        id: '334333',
+        id: '9',
         votes: 12
     },
 ];

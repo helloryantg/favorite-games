@@ -62,9 +62,9 @@ const Post = ({ post }) => {
         <Container>
             <Left>
                 <Votes>
-                    <UpButton><i class="caret up icon"></i></UpButton>
+                    <UpButton><i className="caret up icon"></i></UpButton>
                     <PostVotes>{post.votes}</PostVotes>
-                    <DownButton><i class="caret down icon"></i></DownButton>
+                    <DownButton><i className="caret down icon"></i></DownButton>
                 </Votes>
             </Left>
             <Right>

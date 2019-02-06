@@ -12,7 +12,7 @@ const Container = styled.div`
 const Footer = () => {
     return (
         <Container className="Footer">
-            <i class="copyright outline icon"></i>
+            <i className="copyright outline icon"></i>
             <p>Ryan Gonzales 2019</p>
         </Container>
     );

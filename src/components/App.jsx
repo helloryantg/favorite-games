@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 import Main from './Main';
+import device from '../device';
 
 class App extends Component {
   state = {
@@ -13,6 +14,7 @@ class App extends Component {
   };
   
   render() {
+    
     return (
       <div className="App">
         <NavBar gameList={this.state.gameList}/>
