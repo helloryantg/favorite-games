@@ -1,5 +1,13 @@
 import React from 'react';
-import './NavList.scss';
+import styled from 'styled-components';
+import variables from '../variables';
+
+const Container = styled.div`
+    & .header#color-white {
+        font-size: 2rem;
+        color: ${variables.colorPrimaryWhite} !important;
+    }
+`;
 
 const NavList = (props) => {
     let gameList = props.gameList;
@@ -13,12 +21,12 @@ const NavList = (props) => {
     ));
     
     return (
-        <div className="NavList">
-            <div className="NavList__burger"></div>
-            <div className="NavList__list ui relaxed horizontal list">
+        <Container>
+            <div className="burger"></div>
+            <div className="ui relaxed horizontal list">
                 {games}
             </div>
-        </div>
+        </Container>
     );
 }
 

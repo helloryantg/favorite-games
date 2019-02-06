@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import Announcement from '../Announcement/Announcement';
-import variables from '../../variables';
-import Post from '../Post/Post';
-import posts from '../../posts';
-import Footer from '../Footer';
+import Announcement from './Announcement';
+import variables from '../variables';
+import Post from './Post';
+import posts from '../posts';
+import Footer from './Footer';
 
 const Container = styled.div`
     background-color: ${variables.colorSecondaryGrey};

@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import './App.scss';
-import NavBar from '../NavBar/NavBar';
-import Header from '../Header/Header';
-import Main from '../Main/Main';
+import NavBar from './NavBar';
+import Main from './Main';
 
 class App extends Component {
   state = {
@@ -18,9 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar gameList={this.state.gameList}/>
-        <Header />
         <Main />
-      
       </div>
     );
   }

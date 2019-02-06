@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import variables from '../../variables';
+import variables from '../variables';
 
 const Container = styled.div`
     background-color: ${variables.colorPrimaryWhite};
@@ -23,8 +23,6 @@ const Votes = styled.div`
 `;
 
 const Right = styled.div`
-    // width: 94%;
-
     & ul {
         display: flex;
 
@@ -32,7 +30,7 @@ const Right = styled.div`
             margin-right: 2rem;
             font-size: 1.2rem;
             white-space: nowrap;
-            over-flow: hidden;
+            overflow: hidden;
         }
     }
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import variables from '../../variables';
+import variables from '../variables';
 
 const Container = styled.div`
     margin: 2.3rem 3rem .2rem 3rem;
@@ -25,6 +25,8 @@ const Button = styled.button`
     font-size: 1.4rem;
     background-color: ${variables.colorPrimaryGreen};
     border-radius: 3px;
+    white-space: nowrap;
+    overflow: hidden;
 `;
 
 const Join = () => {
