@@ -1,0 +1,18 @@
+@import '../../sass/variables';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5% // 1 rem = 10px
+}
+
+body {
+    box-sizing: border-box;
+}
