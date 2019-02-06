@@ -6,31 +6,33 @@ const Container = styled.div`
     background-color: ${variables.colorPrimaryWhite};
     margin: .2rem 3rem;
     padding: 2.2rem;
-    border: 1px solid red;
     display: flex;
     align-items: center;
     height: 10rem;
+    overflow: hidden;
 `;
 
 const Left = styled.div`
-    width: 10%;
 `;
 
 const Votes = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 3rem 0 .8rem;
 `;
 
 const Right = styled.div`
-    width: 90%;
+    // width: 94%;
 
     & ul {
         display: flex;
 
         & li {
             margin-right: 2rem;
-            font-size: 1rem;
+            font-size: 1.2rem;
+            white-space: nowrap;
+            over-flow: hidden;
         }
     }
 `;
@@ -71,7 +73,7 @@ const Post = ({ post }) => {
                 <h2>{post.title}</h2>
                 <ul>
                     <li><a href="/"><u>{post.comments.length} comments</u></a></li>
-                    <li>{post.postHours} hours ago</li>
+                    <li>{post.postHours} hours ago from <u><a href="/">{post.user}</a></u>, {post.userTitle} at {post.company}</li>
                 </ul>
             </Right>
         </Container>

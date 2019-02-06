@@ -3,33 +3,32 @@ import styled from 'styled-components';
 import Announcement from '../Announcement/Announcement';
 import variables from '../../variables';
 import Post from '../Post/Post';
+import posts from '../../posts';
+import Footer from '../Footer';
 
 const Container = styled.div`
     background-color: ${variables.colorSecondaryGrey};
+
+    & .next {
+        background-color: ${variables.colorPrimaryWhite};
+        margin: .2rem 3rem;
+        padding: 2.2rem;
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        & a {
+            display: inline-block;
+            color: ${variables.colorPrimaryBlue};
+            font-weight: 700;
+        }
+    }
 `;
 
 class Main extends React.Component {
     state = {
-        posts: [
-            {
-                title: 'League of Legends',
-                postHours: 11,
-                comments: ['This rocks!', 'I love this game'],
-                user: 'Ryan Gonzales',
-                userTitle: 'Full-Stack Web Developer',
-                id: '123123',
-                votes: 2
-            },
-            {
-                title: 'Zelda: Breath of the Wind',
-                postHours: 3,
-                comments: ['This is a great recommendation!', 'I love this game'],
-                user: 'Phuong Dinh',
-                userTitle: 'Web Designer',
-                id: '334333',
-                votes: 12
-            }
-        ]
+        posts: posts
     };
 
     render() {
@@ -38,6 +37,8 @@ class Main extends React.Component {
             <Container className="Main">
                 <Announcement />
                 {posts}
+                <div className="next"><a href='/'>Next</a></div>
+                <Footer />
             </Container>    
         );
     }
