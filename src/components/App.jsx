@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
 import NavBar from './NavBar';
 import Main from './Main';
-import device from '../device';
+// import device from '../device';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
+import NewPost from '../components/NewPost';
+import styled from 'styled-components';
+import variables from '../variables';
+import Footer from '../components/Footer';
+
+const Container = styled.div`
+  background-color: ${variables.colorSecondaryGrey};
+  height: 100vh;
+`;
 
 class App extends Component {
   state = {
@@ -16,10 +30,17 @@ class App extends Component {
   render() {
     
     return (
-      <div className="App">
+      <Container className="App">
         <NavBar gameList={this.state.gameList}/>
-        <Main />
-      </div>
+        
+        <Router>
+          <Switch>
+            <Route exact path='/' render={() => <Main />} />
+            <Route exact path='/new' render={() => <NewPost />} />
+          </Switch>
+        </Router>
+        <Footer />
+      </Container>
     );
   }
 }

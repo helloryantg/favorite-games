@@ -7,6 +7,7 @@
 * npm i express morgan serve-favicon mongoose dotenv
 * add "proxy": "http://localhost:3001",
 * place undernearth scrips in package.json
+* npm i react-router-dom
 
 ## 
 * to start, use nodemon server and then npm start

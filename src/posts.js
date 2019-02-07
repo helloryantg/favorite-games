@@ -1,6 +1,7 @@
 const posts = [
     {
         title: 'League of Legends',
+        description: 'This game has been my favorite since I was 14 years old.',
         postHours: 11,
         comments: ['This rocks!', 'I love this game'],
         user: 'Ryan Gonzales',
@@ -11,6 +12,7 @@ const posts = [
     },
     {
         title: 'Zelda: Breath of the Wind',
+        description: 'I love watching my boyfriend play this game. It\'s well worth the $60!',
         postHours: 3,
         comments: ['This is a great recommendation!', 'I love this game'],
         user: 'Phuong Dinh',
@@ -18,77 +20,7 @@ const posts = [
         company: 'Column Five',
         id: '2',
         votes: 12
-    },
-    {
-        title: 'Zelda: Breath of the Wind',
-        postHours: 3,
-        comments: ['This is a great recommendation!', 'I love this game'],
-        user: 'Phuong Dinh',
-        userTitle: 'Web Designer',
-        company: 'Column Five',
-        id: '3',
-        votes: 12
-    },
-    {
-        title: 'Zelda: Breath of the Wind',
-        postHours: 3,
-        comments: ['This is a great recommendation!', 'I love this game'],
-        user: 'Phuong Dinh',
-        userTitle: 'Web Designer',
-        company: 'Column Five',
-        id: '4',
-        votes: 12
-    },
-    {
-        title: 'Zelda: Breath of the Wind',
-        postHours: 3,
-        comments: ['This is a great recommendation!', 'I love this game'],
-        user: 'Phuong Dinh',
-        userTitle: 'Web Designer',
-        company: 'Column Five',
-        id: '5',
-        votes: 12
-    },
-    {
-        title: 'Zelda: Breath of the Wind',
-        postHours: 3,
-        comments: ['This is a great recommendation!', 'I love this game'],
-        user: 'Phuong Dinh',
-        userTitle: 'Web Designer',
-        company: 'Column Five',
-        id: '6',
-        votes: 12
-    },
-    {
-        title: 'Zelda: Breath of the Wind',
-        postHours: 3,
-        comments: ['This is a great recommendation!', 'I love this game'],
-        user: 'Phuong Dinh',
-        userTitle: 'Web Designer',
-        company: 'Column Five',
-        id: '7',
-        votes: 12
-    },
-    {
-        title: 'Zelda: Breath of the Wind',
-        postHours: 3,
-        comments: ['This is a great recommendation!', 'I love this game'],
-        user: 'Phuong Dinh',
-        userTitle: 'Web Designer',
-        company: 'Column Five',
-        id: '8',
-        votes: 12
-    },
-    {
-        title: 'Zelda: Breath of the Wind',
-        postHours: 3,
-        comments: ['This is a great recommendation!', 'I love this game'],
-        user: 'Phuong Dinh',
-        userTitle: 'Web Designer',
-        company: 'Column Five',
-        id: '9',
-        votes: 12
-    },
+    }
 ];
 
 export default posts;

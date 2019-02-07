@@ -4,11 +4,8 @@ import Announcement from './Announcement';
 import variables from '../variables';
 import Post from './Post';
 import posts from '../posts';
-import Footer from './Footer';
 
 const Container = styled.div`
-    background-color: ${variables.colorSecondaryGrey};
-
     & .next {
         background-color: ${variables.colorPrimaryWhite};
         margin: .2rem 3rem;
@@ -38,7 +35,6 @@ class Main extends React.Component {
                 <Announcement />
                 {posts}
                 <div className="next"><a href='/'>Next</a></div>
-                <Footer />
             </Container>    
         );
     }

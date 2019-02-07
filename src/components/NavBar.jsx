@@ -85,7 +85,7 @@ const NavBar = (props) => {
                 <div className="right">
                     <a href="/"><i className="user circle icon"></i></a>
                     <a href="/"><i className="search icon"></i></a>
-                    <Button><a className="right-button" href="/">New Post</a></Button>
+                    <Button><a className="right-button" href="/new">New Post</a></Button>
                 </div>   
             </TopNavigation>
 

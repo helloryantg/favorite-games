@@ -7,6 +7,9 @@ const Container = styled.div`
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
 `;
 
 const Footer = () => {
