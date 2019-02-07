@@ -8,6 +8,10 @@
 * add "proxy": "http://localhost:3001",
 * place undernearth scrips in package.json
 * npm i react-router-dom
+* npm i bcryptjs jsonwebtoken
 
 ## 
 * to start, use nodemon server and then npm start
+
+### current issue
+- Clicking on user icon is not making the login form visible

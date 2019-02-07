@@ -73,32 +73,38 @@ const BottomNavigation = styled.div`
     }
 `;
 
-const NavBar = (props) => {
-    return (
-        <Container>
-            <TopNavigation>
-                <div className="left">
-                    <a href="/"><i className="gamepad icon"></i></a>
-                    <NavList gameList={props.gameList}/>
-                </div>
+class NavBar extends React.Component {
+    onLoginClicked = (e) => {
+        e.preventDefault();
+        this.props.onLoginClick();
+    }
 
-                <div className="right">
-                    <a href="/"><i className="user circle icon"></i></a>
-                    <a href="/"><i className="search icon"></i></a>
-                    <Button><a className="right-button" href="/new">New Post</a></Button>
-                </div>   
-            </TopNavigation>
-
-            <BottomNavigation>
-                <ul>
-                    <li><a href="/">Top</a></li>
-                    <li><a href="/">Recent</a></li>
-                    <li><a href="/">Starred</a></li>
-                    <li><a href="/">Badges</a></li>
-                </ul>
-            </BottomNavigation>    
-        </Container>
-    );
+    render() {
+        return (
+            <Container>
+                <TopNavigation>
+                    <div className="left">
+                        <a href="/"><i className="gamepad icon"></i></a>
+                        <NavList gameList={this.props.gameList}/>
+                    </div>
+    
+                    <div className="right">
+                        <a href="/"><i className="user circle icon" onClick={() => this.onLoginClicked}></i></a>
+                        <a href="/"><i className="search icon"></i></a>
+                        <Button><a className="right-button" href="/new">New Post</a></Button>
+                    </div>   
+                </TopNavigation>
+                <BottomNavigation>
+                    <ul>
+                        <li><a href="/">Top</a></li>
+                        <li><a href="/">Recent</a></li>
+                        <li><a href="/">Starred</a></li>
+                        <li><a href="/">Badges</a></li>
+                    </ul>
+                </BottomNavigation>    
+            </Container>
+        );
+    }
 }
 
 export default NavBar;

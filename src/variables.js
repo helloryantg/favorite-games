@@ -5,7 +5,9 @@ const variables = {
     colorPrimaryWhite:  '#fff',
     colorPrimaryGrey:   '#3e4551',
     colorSecondaryGrey: '#eeeeee',
-    colorPrimaryGreen:  '#40b771'
+    colorPrimaryGreen:  '#40b771',
+    colorPrimaryBlack: '#121821',
+    colorPrimaryYellow: '#f3b215'
 }
 
 export default variables;

@@ -4,6 +4,7 @@ import Announcement from './Announcement';
 import variables from '../variables';
 import Post from './Post';
 import posts from '../posts';
+import LoginForm from '../components/LoginForm';
 
 const Container = styled.div`
     & .next {
@@ -24,14 +25,18 @@ const Container = styled.div`
 `;
 
 class Main extends React.Component {
-    state = {
-        posts: posts
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            posts: posts,
+        };
+    }
 
     render() {
         let posts = this.state.posts.map((post) => (<Post key={post.id} post={post}/>));
         return (
             <Container className="Main">
+                {this.props.loginClicked ? <LoginForm onSignupOrLogin={this.props.onSignupOrLogin} /> : null}
                 <Announcement />
                 {posts}
                 <div className="next"><a href='/'>Next</a></div>
