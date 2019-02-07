@@ -12,6 +12,8 @@ import styled from 'styled-components';
 import variables from '../variables';
 import Footer from '../components/Footer';
 import userService from '../utils/userService';
+import SignupForm from '../components/SignupForm';
+import LoginForm from '../components/LoginForm';
 
 const Container = styled.div`
   background-color: ${variables.colorSecondaryGrey};
@@ -29,7 +31,7 @@ class App extends Component {
         { title: 'Switch', url: '/' },
         { title: 'PS4', url: '/' },
       ],
-      loginClicked: false
+      isHidden: true
     };
   }
 
@@ -42,30 +44,43 @@ class App extends Component {
     this.setState({ user: userService.getUser() });
   }
 
-  onLoginClick = () => {
-    this.setState({ loginClicked: true });
+  toggleHidden = () => {
+    this.setState({
+      isHidden: !this.state.isHidden
+    })
   }
 
   componentDidMount() {
     let user = userService.getUser();
-    this.setState = ({ user });
+    this.setState({ user });
   }
   
   render() {
-    const main = <Main 
-      onSignupOrLogin={this.onSignupOrLogin} 
-      loginClicked={this.state.loginClicked} />;
-
     return (
       <Container className="App">
         <NavBar 
+          user={this.state.user}
           gameList={this.state.gameList}
-          onLoginClick={this.onLoginClick}/>
+          toggleHidden={this.toggleHidden}
+          onLogout={this.onLogout} />
         <Router>
           <Switch>
-            <Route exact path='/' render={() => 
-              main} />
+            <Route exact path='/' render={(props) => 
+              <Main 
+                {...props}
+                onSignupOrLogin={this.onSignupOrLogin}
+                isHidden={this.state.isHidden} />} />
             <Route exact path='/new' render={() => <NewPost />} />
+            <Route exact path='/signup' render={({history}) => 
+              <SignupForm 
+                history={history}
+                onSignupOrLogin={this.onSignupOrLogin} />} />
+            <Route exact path='/login' render={(props) =>
+              <LoginForm 
+                {...props}
+                handleSignupOrLogin={this.handleSignupOrLogin}
+              />
+            }/>
           </Switch>
         </Router>
         <Footer />

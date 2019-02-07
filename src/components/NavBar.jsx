@@ -34,10 +34,12 @@ const TopNavigation = styled.div`
         display: flex;
         align-items: center;
 
-        & a {
+        & a,
+        & div {
             color: ${variables.colorPrimaryWhite};
             font-size: 2rem;
             margin: 0 1rem;
+            cursor: pointer;
         }
     }
 `;
@@ -73,38 +75,34 @@ const BottomNavigation = styled.div`
     }
 `;
 
-class NavBar extends React.Component {
-    onLoginClicked = (e) => {
-        e.preventDefault();
-        this.props.onLoginClick();
-    }
+const NavBar = ({ user, gameList, toggleHidden, onLogout }) => {
 
-    render() {
-        return (
-            <Container>
-                <TopNavigation>
-                    <div className="left">
-                        <a href="/"><i className="gamepad icon"></i></a>
-                        <NavList gameList={this.props.gameList}/>
-                    </div>
-    
-                    <div className="right">
-                        <a href="/"><i className="user circle icon" onClick={() => this.onLoginClicked}></i></a>
-                        <a href="/"><i className="search icon"></i></a>
-                        <Button><a className="right-button" href="/new">New Post</a></Button>
-                    </div>   
-                </TopNavigation>
-                <BottomNavigation>
-                    <ul>
-                        <li><a href="/">Top</a></li>
-                        <li><a href="/">Recent</a></li>
-                        <li><a href="/">Starred</a></li>
-                        <li><a href="/">Badges</a></li>
-                    </ul>
-                </BottomNavigation>    
-            </Container>
-        );
-    }
+    const renderedUser = user ? <div>Hi, {user.name} | <a href="/" onClick={onLogout}>Log Out</a></div> : <i className="user circle icon" onClick={toggleHidden}></i>;
+
+    return (
+        <Container>
+            <TopNavigation>
+                <div className="left">
+                    <a href="/"><i className="gamepad icon"></i></a>
+                    <NavList gameList={gameList}/>
+                </div>
+
+                <div className="right">
+                    <div>{renderedUser}</div>
+                    <a href="/"><i className="search icon"></i></a>
+                    <Button><a className="right-button" href="/new">New Post</a></Button>
+                </div>   
+            </TopNavigation>
+            <BottomNavigation>
+                <ul>
+                    <li><a href="/">Top</a></li>
+                    <li><a href="/">Recent</a></li>
+                    <li><a href="/">Starred</a></li>
+                    <li><a href="/">Badges</a></li>
+                </ul>
+            </BottomNavigation>    
+        </Container>
+    );
 }
 
 export default NavBar;

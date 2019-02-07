@@ -33,10 +33,12 @@ class Main extends React.Component {
     }
 
     render() {
+        // const renderedComponent = !this.props.isHidden && <LoginForm history={this.props.history} onSignupOrLogin={this.props.onSignupOrLogin} />
+
         let posts = this.state.posts.map((post) => (<Post key={post.id} post={post}/>));
         return (
             <Container className="Main">
-                {this.props.loginClicked ? <LoginForm onSignupOrLogin={this.props.onSignupOrLogin} /> : null}
+                {/* {renderedComponent} */}
                 <Announcement />
                 {posts}
                 <div className="next"><a href='/'>Next</a></div>

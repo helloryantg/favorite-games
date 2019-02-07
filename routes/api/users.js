@@ -1,7 +1,7 @@
-const express = require('express');
-const router = express.Router();
-const User = require('../../models/user');
-const usersCtrl = require('../../controllers/users');
+let express = require('express');
+let router = express.Router();
+let User = require('../../models/user');
+let usersCtrl = require('../../controllers/users');
 
 /*---------- Public Routes ----------*/
 router.post('/signup', usersCtrl.signup);
